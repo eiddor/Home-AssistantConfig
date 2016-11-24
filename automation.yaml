@@ -1,0 +1,100 @@
+### automation.yaml
+- alias: Update notifications
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: updater.updater
+  action:
+    service: notify.pushbullet
+    data: 
+      title: 'New Home Assistant Release'
+      message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
+
+## Dash Button
+- alias: Turn On/Off Bedroom Lamp
+  hide_entity: True
+  trigger:
+    platform: event
+    event_type: lamp_bedroom
+  action:
+    service: homeassistant.toggle
+    entity_id: switch.aeotec_zw096_smart_switch_6_switch_2_0
+
+- alias: Turn Porch Light On At Sunset
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.ge_12722_onoff_relay_switch_switch_4_0  
+    
+- alias: Turn Porch Light Off At Sunrise
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.ge_12722_onoff_relay_switch_switch_4_0 
+
+
+- alias: Bedroom Fan -  Off
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: input_select.fan_speed
+    to: "Off"
+  action:
+    service: light.turn_off
+    entity_id: light.ge_12730_fan_control_switch_level_6_0
+
+- alias: Bedroom Fan - High
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: input_select.fan_speed
+    to: "High"
+  action:
+    service: light.turn_on
+    entity_id: light.ge_12730_fan_control_switch_level_6_0
+    data:
+      brightness: 254
+
+- alias: Bedroom Fan - Medium
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: input_select.fan_speed
+    to: "Medium"
+  action:
+    service: light.turn_on
+    entity_id: light.ge_12730_fan_control_switch_level_6_0
+    data: 
+      brightness: 150
+
+- alias: Bedroom Fan - Low
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: input_select.fan_speed
+    to: "Low"
+  action:
+    service: light.turn_on
+    entity_id: light.ge_12730_fan_control_switch_level_6_0
+    data: 
+      brightness: 30
+
+- alias: Backup HA Configuration Files
+  trigger:
+    platform: time
+    hours: 1
+    minutes: 1
+    seconds: 0 
+  action:
+    - service: shell_command.backup_configuration
+    - service: shell_command.backup_group
+    - service: shell_command.backup_customize
+    - service: shell_command.backup_known_devices
+    - service: shell_command.backup_automation
+    - service: shell_command.backup_device_tracker

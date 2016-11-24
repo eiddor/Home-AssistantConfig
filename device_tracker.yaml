@@ -1,0 +1,8 @@
+### device_tracker.yaml
+- platform: nmap_tracker
+  interval_seconds: 60
+  hosts:
+    - 10.9.21.7
+    - 10.9.21.48
+- platform: owntracks
+  max_gps_accuracy: 200

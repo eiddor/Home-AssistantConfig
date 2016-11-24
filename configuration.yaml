@@ -1,0 +1,128 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret homeassistant_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+  customize: !include customize.yaml
+
+ 
+
+#Groups
+
+group: !include group.yaml
+
+
+
+# Show links to resources in log and frontend
+# introduction:
+
+media_player:
+  - platform: roku
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+
+notify:
+  platform: pushbullet
+  api_key: !secret pushbullet_api
+  name: pushbullet
+
+# Emulated Hue
+emulated_hue:
+  host_ip: 10.9.21.150
+
+# Automation Section
+
+automation: !include automation.yaml
+
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+  platform: yr
+  monitored_conditions:
+    - temperature
+    - symbol
+
+zwave:
+  usb_path: /dev/zwave
+  config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+#input_select
+input_select:
+  fan_speed:
+    name: Bedroom Fan Speed
+    options:
+     - "Off"
+     - Low
+     - Medium
+     - High
+    initial: Medium
+    icon: mdi:fan
+
+# SNMP Device Tracker
+# device_tracker:
+#  - platform: snmp
+#    host: 10.9.21.1
+#    community: cisco123
+#    baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+
+# Device Tracker
+device_tracker: !include device_tracker.yaml
+
+#MQTT
+mqtt:
+  broker: m13.cloudmqtt.com
+  port: 23219
+  username: !secret cloudmqtt_username
+  password: !secret cloudmqtt_password
+
+shell_command:
+
+# Config Backup
+
+  backup_configuration: cp -a /home/homeassistant/.homeassistant/configuration.yaml "/home/homeassistant/backup/configuration.yaml-$(date +"%m%d%Y-%H%M")"
+  backup_group: cp -a /home/homeassistant/.homeassistant/group.yaml "/home/homeassistant/backup/group.yaml-$(date +"%m%d%Y-%H%M")"
+  backup_customize: cp -a /home/homeassistant/.homeassistant/customize.yaml "/home/homeassistant/backup/customize.yaml-$(date +"%m%d%Y-%H%M")"
+  backup_known_devices: cp -a /home/homeassistant/.homeassistant/known_devices.yaml "/home/homeassistant/backup/known_devices.yaml-$(date +"%m%d%Y-%H%M")"
+  backup_device_tracker: cp -a /home/homeassistant/.homeassistant/device_tracker.yaml "/home/homeassistant/backup/device_tracker.yaml-$(date +"%m%d%Y-%H%M")"
+  backup_automation: cp -a /home/homeassistant/.homeassistant/automation.yaml "/home/homeassistant/backup/automation.yaml-$(date +"%m%d%Y-%H%M")"
+
+script:
+  backup:
+    alias: Backup HA Configuration Files
+    sequence:
+      - service: shell_command.backup_configuration
+      - service: shell_command.backup_group
+      - service: shell_command.backup_customize
+      - service: shell_command.backup_known_devices
+      - service: shell_command.backup_automation
+      - service: shell_command.backup_device_tracker

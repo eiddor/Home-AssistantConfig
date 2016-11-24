@@ -1,0 +1,86 @@
+### customize.yaml
+# Switch Customization
+
+switch.aeotec_zw096_smart_switch_6_switch_2_0:
+  friendly_name: Bedroom Lamp
+  icon: mdi:lamp
+switch.ge_12722_onoff_relay_switch_switch_4_0:
+  friendly_name: Front Porch Light
+  icon: mdi:lightbulb
+switch.ge_12722_onoff_relay_switch_switch_5_0:
+  friendly_name: Bedroom Light
+  icon: mdi:lightbulb
+light.ge_12730_fan_control_switch_level_6_0:
+  friendly_name: Bedroom Fan
+  icon: mdi:fan
+switch.ge_12722_onoff_relay_switch_switch_7_0:
+  friendly_name: Kitchen Island Light
+  icon: mdi:lightbulb
+switch.ge_12722_onoff_relay_switch_switch_8_0:
+  friendly_name: Kitchen Main Light
+  icon: mdi:lightbulb
+
+# Media Players
+
+media_player.roku_2n00ef560969:
+  friendly_name: Roku TV
+  icon: mdi:tv
+media_player.roku_13c1cf162182:
+  friendly_name: Media Room Roku
+media_player.roku_1gn39a049560:
+  friendly_name: Guest Room Roku
+media_player.plex_web_chrome:
+  friendly_name: Plex Server
+
+#MultiSensor Customization
+
+sensor.aeotec_zw100_multisensor_6_temperature_11_1:
+  friendly_name: Temperature
+sensor.aeotec_zw100_multisensor_6_relative_humidity_11_5:
+  friendly_name: Humidity
+  icon: mdi:water
+sensor.aeotec_zw100_multisensor_6_luminance_11_3:
+  friendly_name: Luminance
+  icon: mdi:weather-sunny
+sensor.aeotec_zw100_multisensor_6_ultraviolet_11_27:
+  friendly_name: Ultraviolet
+  icon: mdi:sunglasses
+binary_sensor.aeotec_zw100_multisensor_6_sensor_11_0:
+  friendly_name: Sensor
+sensor.aeotec_zw100_multisensor_6_burglar_11_10:
+  friendly_name: Motion sensor
+  icon: mdi:run
+sensor.aeotec_zw100_multisensor_6_alarm_level_11_1:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_alarm_type_11_0:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_sourcenodeid_11_2:
+  hidden: true
+
+# Smart Switch Customization
+
+sensor.aeotec_zw096_smart_switch_6_current_2_20:
+  friendly_name: Current
+sensor.aeotec_zw096_smart_switch_6_energy_2_0:
+  friendly_name: Energy 
+sensor.aeotec_zw096_smart_switch_6_power_2_8:
+  friendly_name: Power 
+sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1:
+  friendly_name: Previous Reading
+sensor.aeotec_zw096_smart_switch_6_voltage_2_16:
+  friendly_name: Voltage
+
+#Presence Customization
+
+device_tracker.roddie_roddie:
+  friendly_name: Roddie's iPhone
+  icon: mdi:face-profile
+
+device_tracker.90b6865b92b2:
+  friendly_name: Brian's Android
+  icon: mdi:face-profile
+
+device_tracker.90b0ed89349a:
+  friendly_name: Erin's iPhone
+  icon: mdi:face-profile
+

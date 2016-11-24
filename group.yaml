@@ -1,0 +1,55 @@
+### group.yaml
+
+
+# Home tab
+
+default_view:
+  view: yes
+  entities: 
+    - group.bedroom
+    - group.kitchen
+    - group.outside
+    - group.people
+
+bedroom: switch.aeotec_zw096_smart_switch_6_switch_2_0, switch.ge_12722_onoff_relay_switch_switch_5_0, light.ge_12730_fan_control_switch_level_6_0, input_select.fan_speed 
+
+kitchen: switch.ge_12722_onoff_relay_switch_switch_7_0, switch.ge_12722_onoff_relay_switch_switch_8_0
+outside: switch.ge_12722_onoff_relay_switch_switch_4_0
+
+people: device_tracker.90b0ed89349a, device_tracker.90b6865b92b2, device_tracker.roddie_roddie
+
+# Information Tab
+
+information:
+  view: yes
+  entities:
+    - group.multisensor
+    - group.energy
+
+multisensor:
+  entities:
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor_11_0
+    - sensor.aeotec_zw100_multisensor_6_temperature_11_1
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_11_5
+    - sensor.aeotec_zw100_multisensor_6_luminance_11_3
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_11_27
+    - sensor.aeotec_zw100_multisensor_6_burglar_11_10
+energy:
+  entities:
+      - sensor.aeotec_zw096_smart_switch_6_current_2_20
+      - sensor.aeotec_zw096_smart_switch_6_energy_2_0
+      - sensor.aeotec_zw096_smart_switch_6_power_2_8
+      - sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1
+      - sensor.aeotec_zw096_smart_switch_6_voltage_2_16
+
+# Entertainment Tab
+
+entertainment:
+  view: yes
+  entities:
+    - media_player.roku_2n00ef560969
+    - media_player.roku_2n00ef560969
+    - media_player.roku_13c1cf162182
+    - media_player.roku_1gn39a049560
+    - configurator.plex_media_server
+    - media_player.plex_web_chrome
