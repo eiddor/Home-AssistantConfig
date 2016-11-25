@@ -23,6 +23,7 @@ people: device_tracker.90b0ed89349a, device_tracker.90b6865b92b2, device_tracker
 information:
   view: yes
   entities:
+    - script.backup
     - group.multisensor
     - group.energy
     - group.darksky
