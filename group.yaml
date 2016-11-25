@@ -25,7 +25,7 @@ information:
   entities:
     - group.multisensor
     - group.energy
-
+    - group.darksky
 multisensor:
   entities:
     - binary_sensor.aeotec_zw100_multisensor_6_sensor_11_0
@@ -36,11 +36,27 @@ multisensor:
     - sensor.aeotec_zw100_multisensor_6_burglar_11_10
 energy:
   entities:
-      - sensor.aeotec_zw096_smart_switch_6_current_2_20
-      - sensor.aeotec_zw096_smart_switch_6_energy_2_0
-      - sensor.aeotec_zw096_smart_switch_6_power_2_8
-      - sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1
-      - sensor.aeotec_zw096_smart_switch_6_voltage_2_16
+    - sensor.aeotec_zw096_smart_switch_6_current_2_20
+    - sensor.aeotec_zw096_smart_switch_6_energy_2_0
+    - sensor.aeotec_zw096_smart_switch_6_power_2_8
+    - sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1
+    - sensor.aeotec_zw096_smart_switch_6_voltage_2_16
+
+darksky:
+  entities:
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_icon
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_hourly_summary
+    - sensor.dark_sky_daily_summary
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_high_apparent_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_daily_low_apparent_temperature
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_precip_probability
 
 # Entertainment Tab
 
