@@ -51,7 +51,7 @@ automation: !include automation.yaml
 updater:
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
@@ -104,6 +104,15 @@ input_select:
      - High
     initial: Medium
     icon: mdi:fan
+
+input_slider:
+   media_room_brightness:
+    name: Brightness
+    initial: 20
+    min: 0
+    max: 254
+    step: 1
+    icon: mdi:brightness-6
 
 # SNMP Device Tracker
 # device_tracker:

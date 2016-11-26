@@ -8,15 +8,22 @@ default_view:
   entities: 
     - group.bedroom
     - group.kitchen
+    - group.mediaroom
     - group.outside
     - group.people
 
 bedroom: switch.aeotec_zw096_smart_switch_6_switch_2_0, switch.ge_12722_onoff_relay_switch_switch_5_0, light.ge_12730_fan_control_switch_level_6_0, input_select.fan_speed 
-
+mediaroom: 
+  name: Media Room
+  entities:
+    - switch.ge_12722_onoff_relay_switch_switch_13_0
+    - light.ge_12724_3way_dimmer_switch_level_14_0
+    - input_slider.media_room_brightness
 kitchen: switch.ge_12722_onoff_relay_switch_switch_7_0, switch.ge_12722_onoff_relay_switch_switch_8_0
-outside: switch.ge_12722_onoff_relay_switch_switch_4_0
+outside: switch.ge_12722_onoff_relay_switch_switch_4_0, switch.ge_12720_outdoor_smart_switch_switch_12_0
 
 people: device_tracker.90b0ed89349a, device_tracker.90b6865b92b2, device_tracker.roddie_roddie
+
 
 # Information Tab
 
@@ -68,5 +75,4 @@ entertainment:
     - media_player.roku_2n00ef560969
     - media_player.roku_13c1cf162182
     - media_player.roku_1gn39a049560
-    - configurator.plex_media_server
     - media_player.plex_web_chrome

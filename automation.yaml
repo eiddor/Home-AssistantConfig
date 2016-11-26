@@ -38,6 +38,34 @@
     service: homeassistant.turn_off
     entity_id: switch.ge_12722_onoff_relay_switch_switch_4_0 
 
+- alias: Turn Christmas Lights On At Sunset
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.ge_12720_outdoor_smart_switch_switch_12_0
+
+- alias: Turn Christmas Lights Off At Midnight
+  hide_entity: True
+  trigger:
+    platform: time
+    after: '23:59:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.ge_12720_outdoor_smart_switch_switch_12_0 
+
+- alias: Media Room Theater Lights - Adjust Brightness
+  hide_entity: True 
+  trigger:
+    platform: state
+    entity_id: input_slider.media_room_brightness
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.ge_12724_3way_dimmer_switch_level_14_0
+        brightness: '{{ trigger.to_state.state | int }}'
 
 - alias: Bedroom Fan -  Off
   hide_entity: True
