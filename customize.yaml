@@ -55,7 +55,7 @@ sensor.aeotec_zw100_multisensor_6_ultraviolet_11_27:
   friendly_name: Ultraviolet
   icon: mdi:sunglasses
 binary_sensor.aeotec_zw100_multisensor_6_sensor_11_0:
-  friendly_name: Sensor
+  friendly_name: Aeotec Multisensor
 sensor.aeotec_zw100_multisensor_6_burglar_11_10:
   friendly_name: Motion sensor
   icon: mdi:run
