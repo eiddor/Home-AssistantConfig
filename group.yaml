@@ -8,6 +8,7 @@ default_view:
   entities: 
     - group.bedroom
     - group.kitchen
+    - group.family_room
     - group.mediaroom
     - group.outside
     - group.people
@@ -15,15 +16,21 @@ default_view:
 bedroom: switch.aeotec_zw096_smart_switch_6_switch_2_0, switch.ge_12722_onoff_relay_switch_switch_5_0, light.ge_12730_fan_control_switch_level_6_0, input_select.fan_speed 
 mediaroom: 
   name: Media Room
+  icon: mdi:movie
   entities:
-    - switch.ge_12722_onoff_relay_switch_switch_13_0
-    - light.ge_12724_3way_dimmer_switch_level_14_0
+    - switch.ge_12722_onoff_relay_switch_switch_10_0
+    - light.ge_12724_3way_dimmer_switch_level_11_0
     - input_slider.media_room_brightness
 kitchen: switch.ge_12722_onoff_relay_switch_switch_7_0, switch.ge_12722_onoff_relay_switch_switch_8_0
 outside: switch.ge_12722_onoff_relay_switch_switch_4_0, switch.ge_12720_outdoor_smart_switch_switch_12_0
 
 people: device_tracker.90b0ed89349a, device_tracker.90b6865b92b2, device_tracker.roddie_roddie
-
+family_room: 
+  name: Family Room
+  icon: mdi:couch
+  entities:
+      - light.hue_color_lamp_1
+      - light.hue_color_lamp_2
 
 # Information Tab
 
@@ -33,15 +40,16 @@ information:
     - script.backup
     - group.multisensor
     - group.energy
-    - group.darksky
+    - binary_sensor.__sensor_3_0
+
 multisensor:
   entities:
-    - binary_sensor.aeotec_zw100_multisensor_6_sensor_11_0
-    - sensor.aeotec_zw100_multisensor_6_temperature_11_1
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_11_5
-    - sensor.aeotec_zw100_multisensor_6_luminance_11_3
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_11_27
-    - sensor.aeotec_zw100_multisensor_6_burglar_11_10
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor_9_0
+    - sensor.aeotec_zw100_multisensor_6_temperature_9_1
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5
+    - sensor.aeotec_zw100_multisensor_6_luminance_9_3
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27
+    - sensor.aeotec_zw100_multisensor_6_burglar_9_10
 energy:
   entities:
     - sensor.aeotec_zw096_smart_switch_6_current_2_20
@@ -49,6 +57,12 @@ energy:
     - sensor.aeotec_zw096_smart_switch_6_power_2_8
     - sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1
     - sensor.aeotec_zw096_smart_switch_6_voltage_2_16
+
+# Weather View
+weather:
+    view: yes
+    entities:
+      - group.darksky
 
 darksky:
   entities:

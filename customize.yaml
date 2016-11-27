@@ -19,15 +19,26 @@ switch.ge_12722_onoff_relay_switch_switch_7_0:
 switch.ge_12722_onoff_relay_switch_switch_8_0:
   friendly_name: Kitchen Main Light
   icon: mdi:lightbulb
-light.ge_12724_3way_dimmer_switch_level_14_0:
+light.ge_12724_3way_dimmer_switch_level_11_0:
   friendly_name: Media Room Theater Lights
   icon: mdi:movie
-switch.ge_12722_onoff_relay_switch_switch_13_0:
+switch.ge_12722_onoff_relay_switch_switch_10_0:
   friendly_name: Media Room Main Lights
   icon: mdi:lightbulb
 switch.ge_12720_outdoor_smart_switch_switch_12_0:
   friendly_name: Christmas Lights
   icon: mdi:snowman
+binary_sensor.__sensor_3_0:
+  friendly_name: Aeotec Water sensor
+  icon: mdi:water
+
+#Philips Hue
+light.hue_color_lamp_1:
+  friendly_name: Family Room Lamp 1
+  icon: mdi:lamp
+light.hue_color_lamp_2:
+  friendly_name: Family Room Lamp 2
+  icon: mdi:lamp
 
 # Media Players
 
@@ -43,27 +54,27 @@ media_player.plex_web_chrome:
 
 #MultiSensor Customization
 
-sensor.aeotec_zw100_multisensor_6_temperature_11_1:
+sensor.aeotec_zw100_multisensor_6_temperature_9_1:
   friendly_name: Temperature
-sensor.aeotec_zw100_multisensor_6_relative_humidity_11_5:
+sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5:
   friendly_name: Humidity
   icon: mdi:water
-sensor.aeotec_zw100_multisensor_6_luminance_11_3:
+sensor.aeotec_zw100_multisensor_6_luminance_9_3:
   friendly_name: Luminance
   icon: mdi:weather-sunny
-sensor.aeotec_zw100_multisensor_6_ultraviolet_11_27:
+sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27:
   friendly_name: Ultraviolet
   icon: mdi:sunglasses
-binary_sensor.aeotec_zw100_multisensor_6_sensor_11_0:
+binary_sensor.aeotec_zw100_multisensor_6_sensor_9_0:
   friendly_name: Aeotec Multisensor
-sensor.aeotec_zw100_multisensor_6_burglar_11_10:
+sensor.aeotec_zw100_multisensor_6_burglar_9_10:
   friendly_name: Motion sensor
   icon: mdi:run
-sensor.aeotec_zw100_multisensor_6_alarm_level_11_1:
+sensor.aeotec_zw100_multisensor_6_alarm_level_9_1:
   hidden: true
-sensor.aeotec_zw100_multisensor_6_alarm_type_11_0:
+sensor.aeotec_zw100_multisensor_6_alarm_type_9_0:
   hidden: true
-sensor.aeotec_zw100_multisensor_6_sourcenodeid_11_2:
+sensor.aeotec_zw100_multisensor_6_sourcenodeid_9_2:
   hidden: true
 
 # Smart Switch Customization

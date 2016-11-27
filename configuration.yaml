@@ -26,6 +26,9 @@ group: !include group.yaml
 media_player:
   - platform: roku
 
+light:
+  platform: hue
+  host: 10.9.21.152
 # Enables the frontend
 frontend:
 
@@ -41,13 +44,6 @@ notify:
 # Emulated Hue
 emulated_hue:
   host_ip: 10.9.21.150
-  expose_by_default: false
-  exposed_domains: 
-    - light
-    - switch
-    - group
-    - input_select
-    - input_slider
 
 # Automation Section
 

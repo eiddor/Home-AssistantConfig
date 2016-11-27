@@ -64,7 +64,7 @@
   action:
     - service: light.turn_on
       data_template:
-        entity_id: light.ge_12724_3way_dimmer_switch_level_14_0
+        entity_id: light.ge_12724_3way_dimmer_switch_level_11_0
         brightness: '{{ trigger.to_state.state | int }}'
 
 - alias: Bedroom Fan -  Off
@@ -113,17 +113,17 @@
     data: 
       brightness: 30
 
-- alias: Turn theater lights to 50 on motion
+- alias: Turn theater lights to 80 on motion
   trigger:
     platform: state
-    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_11_10
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar_9_10
     from: '0'
     to: '8'
   action:
     service: light.turn_on
-    entity_id: light.ge_12724_3way_dimmer_switch_level_14_0
+    entity_id: light.ge_12724_3way_dimmer_switch_level_11_0
     data:
-      brightness: 50
+      brightness: 80
 
 - alias: Backup HA Configuration Files
   trigger:
