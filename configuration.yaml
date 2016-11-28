@@ -91,7 +91,8 @@ sensor:
       - temperature_min
       - apparent_temperature_max
       - apparent_temperature_min
-      
+  - platform: plex
+    host: 10.9.21.2    
 zwave:
   usb_path: /dev/zwave
   config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config

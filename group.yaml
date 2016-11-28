@@ -40,6 +40,12 @@ information:
     - script.backup
     - group.multisensor
     - group.energy
+    - group.watersensor
+
+watersensor: 
+  name: Water Sensor
+  icon: mdi:water
+  entities:
     - binary_sensor.__sensor_3_0
 
 multisensor:
@@ -90,3 +96,6 @@ entertainment:
     - media_player.roku_13c1cf162182
     - media_player.roku_1gn39a049560
     - media_player.plex_web_chrome
+    - group.plex
+
+plex: sensor.plex
