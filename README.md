@@ -1,7 +1,7 @@
-# Home-Assistant Config by [@eiddor](http://www.twitter.com/eiddor) (layout ideas stolen from @ccostan)
+# Home-Assistant Config by [@eiddor](http://www.twitter.com/eiddor) (layout ideas stolen from [@ccostan](http://www.twitter.com/ccostan))
 [Home Assistant](https://home-assistant.io/) configuration files (YAMLs)
 
-This is my Home Assistant Configuration.  It's more or less complete for now, but I tend to tinker with things as I learn more about it.
+Welcome to my Home Assistant Configuration.  It's more or less complete for now, but I tend to tinker with things as I learn more about it.
 
 Home Assistant runs on my [Raspberry Pi 3](http://amzn.to/2e3DOBY) with [Aeon Labs Z Wave Stick (GEN 5)](http://amzn.to/2eAiAP0). 
 
@@ -51,4 +51,4 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Purchase a Z-wave compatible garage door opener/sensor
 * Add a couple more Aeotec Multisensors around the house and mess with the family
 * https://github.com/thundergreen/home-assistant/wiki/Add-OZWCP-in-HASS
-
+* Taking suggestions!!!
