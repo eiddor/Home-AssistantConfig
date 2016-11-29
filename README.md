@@ -48,7 +48,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Setup my two remaining Amazon IoT buttons to do something
 * Purchase some kind of doorbell/camera
 * Purchase some Z-Wave compatible thermostats
-* Purchase a Z-wave compatible garage door opener/sensor
+* Purchase a Z-wave compatible garage door opener/sensor [Garadget](http://garadget.com)
 * Add a couple more Aeotec Multisensors around the house and mess with the family
 * https://github.com/thundergreen/home-assistant/wiki/Add-OZWCP-in-HASS
 * Taking suggestions!!!
