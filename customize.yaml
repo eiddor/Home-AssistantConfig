@@ -51,6 +51,8 @@ media_player.roku_1gn39a049560:
   friendly_name: Guest Room Roku
 media_player.plex_web_chrome:
   friendly_name: Plex Server
+remote.media_room:
+  friendly_name: Media Room Remote
 
 #MultiSensor Customization
 

@@ -41,6 +41,7 @@ information:
     - group.multisensor
     - group.energy
     - group.watersensor
+    - group.automations
 
 watersensor: 
   name: Water Sensor
@@ -63,7 +64,11 @@ energy:
     - sensor.aeotec_zw096_smart_switch_6_power_2_8
     - sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1
     - sensor.aeotec_zw096_smart_switch_6_voltage_2_16
-
+automations:
+   entities:
+    - automation.turn_theater_lights_to_80_on_motion_if_no_activity
+    - automation.update_notifications
+    
 # Weather View
 weather:
     view: yes
@@ -97,5 +102,13 @@ entertainment:
     - media_player.roku_1gn39a049560
     - media_player.plex_web_chrome
     - group.plex
+    - group.media_room_remote
 
 plex: sensor.plex
+
+media_room_remote: 
+  name: Media Room
+  icon: mdi:movie
+  entities:
+    - sensor.media_room
+    - remote.media_room

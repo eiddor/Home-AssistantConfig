@@ -22,6 +22,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * [Aeotec ZW100 Multisensor](http://amzn.com/B0151Z8ZQY)
 * [Rokus](http://amzn.to/2dpn89c) [not currently added my Home Assistant]
 * [Plex Media Server](https://www.plex.tv/)
+* [Logitech Harmony Smart Control](http://amzn.com/B00BQ5RYI4)
 
 
 **Automations:**
@@ -30,17 +31,18 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Turn on Christmas Lights at Sunset, off at Midnight
 * Check for Home Assistant Releases and notify via [Pushbullet](https://www.pushbullet.com/)
 * Turn On/Off Bedroom lamp when Dash Button event is called via API [script running on different host]
-* Turn theater lights on in Media Room on motion detection
+* Turn theater lights on in Media Room on motion detection if no one is watching something via the Logitech Harmony Hub
 * Local backup of all configuration files at 1 AM
 
-![Screenshot Home View](http://i.imgur.com/BPwyyPs.jpg)
-![Screenshot of Information View](http://i.imgur.com/tIzvIk6.jpg)
+![Screenshot Home View](http://i.imgur.com/v4KW6bf.png)
+![Screenshot of Information View](http://i.imgur.com/Qa9Y5m6.png)
+![Screenshot of Entertainment View](http://i.imgur.com/hd776EY.png)
 
 #Todo List
 
 * Install GE Z-Wave Outlets
-* Enhance the Media Room motion sensor to turn off lights after a period and check for Lux condition
-* Add Harmony Hub when it arrives
+* ~~Enhance the Media Room motion sensor to turn off lights after a period and check for Lux condition [changed this to detect when there is activity via the Harmony Hub]~~
+* ~~Add Harmony Hub when it arrives~~
 * Configure a clever automation for when the Water Sensor is triggered (it's in a closet with my water heaters)
 * Add more sophisticated control of my Hue lights
 * Buy some Hue LED strips

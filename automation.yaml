@@ -1,6 +1,5 @@
 ### automation.yaml
 - alias: Update notifications
-  hide_entity: True
   trigger:
     - platform: state
       entity_id: updater.updater
@@ -113,17 +112,22 @@
     data: 
       brightness: 30
 
-- alias: Turn theater lights to 80 on motion
+- alias: Turn theater lights to 80 on motion if no activity
   trigger:
     platform: state
     entity_id: sensor.aeotec_zw100_multisensor_6_burglar_9_10
     from: '0'
     to: '8'
+  condition:
+    condition: state
+    entity_id: sensor.media_room
+    state: 'PowerOff'
   action:
     service: light.turn_on
     entity_id: light.ge_12724_3way_dimmer_switch_level_11_0
     data:
       brightness: 80
+
 
 - alias: Backup HA Configuration Files
   trigger:

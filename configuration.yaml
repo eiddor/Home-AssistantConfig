@@ -26,6 +26,15 @@ group: !include group.yaml
 media_player:
   - platform: roku
 
+# Logitech Harmony Hub
+remote:
+  - platform: harmony
+    name: media_room
+    host: 10.9.21.28
+    activity: 22937584
+
+#Philips Hue
+
 light:
   platform: hue
   host: 10.9.21.152
@@ -91,6 +100,12 @@ sensor:
       - temperature_min
       - apparent_temperature_max
       - apparent_temperature_min
+
+  - platform: template
+    sensors:
+      media_room:
+        value_template: '{{ states.remote.media_room.attributes.current_activity }}'
+        friendly_name: 'Media Room'
 
 #Plex Media Server
 
