@@ -11,6 +11,7 @@ default_view:
     - group.family_room
     - group.mediaroom
     - group.outside
+    - group.large_garage_door
     - group.people
 
 bedroom: switch.aeotec_zw096_smart_switch_6_switch_2_0, switch.ge_12722_onoff_relay_switch_switch_5_0, light.ge_12730_fan_control_switch_level_6_0, input_select.fan_speed 
@@ -23,6 +24,15 @@ mediaroom:
     - input_slider.media_room_brightness
 kitchen: switch.ge_12722_onoff_relay_switch_switch_7_0, switch.ge_12722_onoff_relay_switch_switch_8_0
 outside: switch.ge_12722_onoff_relay_switch_switch_4_0, switch.ge_12720_outdoor_smart_switch_switch_12_0
+
+large_garage_door:
+  name: Large Garage door
+  entities:
+    - cover.large_garage_door
+    - sensor.large_garage_door_status
+    - sensor.large_garage_door_time_in_state
+    - sensor.large_garage_door_wifi_signal_strength
+    - sensor.large_garage_door_reflection_rate
 
 people: device_tracker.90b0ed89349a, device_tracker.90b6865b92b2, device_tracker.roddie_roddie
 family_room: 

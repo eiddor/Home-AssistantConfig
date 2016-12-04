@@ -73,6 +73,15 @@ history:
 
 # View all events in a logbook
 logbook:
+  exclude:
+    entities:
+      - sensor.large_garage_door_time_in_state
+      - sensor.large_garage_door_wifi_signal_strength
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_cloud_coverage
+      - sun.sun
 
 # Track the sun
 sun:
@@ -106,6 +115,19 @@ sensor:
       media_room:
         value_template: '{{ states.remote.media_room.attributes.current_activity }}'
         friendly_name: 'Media Room'
+      large_garage_door_status:
+        friendly_name: 'State of the door'
+        value_template: '{{ states.cover.large_garage_door.state }}'
+      large_garage_door_time_in_state:
+        friendly_name: 'Since'
+        value_template: '{{ states.cover.large_garage_door.attributes["time in state"] }}'
+      large_garage_door_wifi_signal_strength:
+        friendly_name: 'WiFi strength'
+        value_template: '{{ states.cover.large_garage_door.attributes["wifi signal strength (dB)"] }}'
+        unit_of_measurement: 'dB'
+      large_garage_door_reflection_rate:
+        friendly_name: 'Reflection Rate'
+        value_template: '{{ states.cover.large_garage_door.attributes["sensor reflection rate"] }}'
 
 #Plex Media Server
 
@@ -127,6 +149,16 @@ input_select:
      - High
     initial: Medium
     icon: mdi:fan
+
+#garage door opener/sensor
+
+cover:
+  platform: garadget
+  covers:
+    !secret garadget_large_door:
+      username: !secret garadget_username
+      password: !secret garadget_password
+      name: Large Garage Door
 
 #input_slider for theater lights
 

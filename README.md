@@ -23,6 +23,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * [Rokus](http://amzn.to/2dpn89c) [not currently added my Home Assistant]
 * [Plex Media Server](https://www.plex.tv/)
 * [Logitech Harmony Smart Control](http://amzn.com/B00BQ5RYI4)
+* [Garadget](http://garadget.com)
 
 
 **Automations:**
@@ -34,7 +35,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Turn theater lights on in Media Room on motion detection if no one is watching something via the Logitech Harmony Hub
 * Local backup of all configuration files at 1 AM
 
-![Screenshot Home View](http://i.imgur.com/v4KW6bf.png)
+![Screenshot Home View](http://i.imgur.com/nYWUbht.png)
 ![Screenshot of Information View](http://i.imgur.com/Qa9Y5m6.png)
 ![Screenshot of Entertainment View](http://i.imgur.com/hd776EY.png)
 
@@ -50,7 +51,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Setup my two remaining Amazon IoT buttons to do something
 * Purchase some kind of doorbell/camera
 * Purchase some Z-Wave compatible thermostats
-* Purchase a Z-wave compatible garage door opener/sensor [Garadget](http://garadget.com)
+* ~~Purchase a Z-wave compatible garage door opener/sensor [Garadget](http://garadget.com)~~
 * Add a couple more Aeotec Multisensors around the house and mess with the family
 * https://github.com/thundergreen/home-assistant/wiki/Add-OZWCP-in-HASS
 * Taking suggestions!!!

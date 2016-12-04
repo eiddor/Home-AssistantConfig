@@ -92,6 +92,15 @@ sensor.aeotec_zw096_smart_switch_6_previous_reading_2_1:
 sensor.aeotec_zw096_smart_switch_6_voltage_2_16:
   friendly_name: Voltage
 
+# Garadget Customization
+
+sensor.large_garage_door_status:
+    icon: mdi:car-connected
+sensor.large_garage_door_time_in_state:
+    icon: mdi:timer-sand
+sensor.large_garage_door_wifi_signal_strength:
+    icon: mdi:wifi
+
 #Presence Customization
 
 device_tracker.roddie_roddie:
