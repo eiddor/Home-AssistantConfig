@@ -37,7 +37,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 
 ![Screenshot Home View](http://i.imgur.com/nYWUbht.png)
 ![Screenshot of Information View](http://i.imgur.com/Qa9Y5m6.png)
-![Screenshot of Entertainment View](http://i.imgur.com/hd776EY.png)
+![Screenshot of Entertainment View](http://i.imgur.com/plN6vGW.png)
 
 #Todo List
 
