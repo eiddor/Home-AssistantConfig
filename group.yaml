@@ -113,7 +113,7 @@ entertainment:
     - media_player.plex_web_chrome
     - group.plex
     - group.media_room_remote
-
+    - group.downloaders
 plex: sensor.plex
 
 media_room_remote: 
@@ -122,3 +122,19 @@ media_room_remote:
   entities:
     - sensor.media_room
     - remote.media_room
+
+downloaders:
+  name: Usenet Stuff
+  icon: mdi:movie
+  entities:
+    - sensor.nzbget_average_speed
+    - sensor.nzbget_disk_free
+    - sensor.nzbget_queue_size
+    - sensor.nzbget_size
+    - sensor.nzbget_speed 
+    - sensor.nzbget_uptime
+    - sensor.sonarr_commands
+    - sensor.sonarr_disk_space
+    - sensor.sonarr_queue
+    - sensor.sonarr_upcoming
+    - sensor.sonarr_wanted

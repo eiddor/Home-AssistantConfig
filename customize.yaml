@@ -54,6 +54,31 @@ media_player.plex_web_chrome:
 remote.media_room:
   friendly_name: Media Room Remote
 
+#Usenet Downloaders
+
+sensor.nzbget_average_speed:
+  friendly_name: NZBGet Average Speed 
+sensor.nzbget_disk_free:
+  friendly_name: NZBGet Free Space 
+sensor.nzbget_queue_size:
+  friendly_name: NZBGet Queue Size
+sensor.nzbget_size:
+  friendly_name: NZBGet Download Size
+sensor.nzbget_speed: 
+  friendly_name: NZBGet Current Speed 
+sensor.nzbget_uptime:
+  friendly_name: NZBGet Uptime 
+sensor.sonarr_commands:
+  friendly_name: Sonarr Commands
+sensor.sonarr_disk_space:
+  friendly_name: Sonarr Free Space
+sensor.sonarr_queue:
+  friendly_name: Sonarr Episodes In Queue
+sensor.sonarr_upcoming:
+  friendly_name: Sonarr Upcoming Episodes
+sensor.sonarr_wanted:
+  friendly_name: Sonarr Episodes Wanted
+
 #MultiSensor Customization
 
 sensor.aeotec_zw100_multisensor_6_temperature_9_1:
