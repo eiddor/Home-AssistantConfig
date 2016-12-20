@@ -6,15 +6,16 @@
 default_view:
   view: yes
   entities: 
-    - group.bedroom
+    - group.people
     - group.kitchen
     - group.family_room
     - group.mediaroom
     - group.outside
     - group.large_garage_door
-    - group.people
+    - group.bedroom
 
 bedroom: switch.aeotec_zw096_smart_switch_6_switch_2_0, switch.ge_12722_onoff_relay_switch_switch_5_0, light.ge_12730_fan_control_switch_level_6_0, input_select.fan_speed 
+
 mediaroom: 
   name: Media Room
   icon: mdi:movie
@@ -138,3 +139,4 @@ downloaders:
     - sensor.sonarr_queue
     - sensor.sonarr_upcoming
     - sensor.sonarr_wanted
+

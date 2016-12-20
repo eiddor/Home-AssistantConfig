@@ -70,6 +70,19 @@ updater:
 
 # Enables support for tracking state changes over time.
 history:
+  exclude:
+    entities:
+      - sensor.large_garage_door_time_in_state
+      - sensor.large_garage_door_wifi_signal_strength
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_cloud_coverage
+      - sun.sun
+
+recorder:
+  # Delete events and states older than 1 weeks
+  purge_days: 7
 
 # View all events in a logbook
 logbook:
