@@ -49,7 +49,7 @@ SUNSET:
      Turn on Christmas Lights
      Turn on Porch Lights
 
-11:59 PM Turn off Christmas Lightsvated **
+11:59 PM Turn off Christmas Lights
 01:01 AM Backup HASS Configuration Files
 02:31 AM Heal ZWave Network
 ```
