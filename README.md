@@ -39,6 +39,21 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 ![Screenshot of Information View](http://i.imgur.com/Qa9Y5m6.png)
 ![Screenshot of Entertainment View](http://i.imgur.com/plN6vGW.png)
 
+
+**Time Based Automation TimeLine** (a WIP)
+```
+SUNRISE:
+     Turn off Porch Lights
+
+SUNSET: 
+     Turn on Christmas Lights
+     Turn on Porch Lights
+
+11:59 PM Turn off Christmas Lightsvated **
+01:01 AM Backup HASS Configuration Files
+02:31 AM Heal ZWave Network
+```
+
 #Todo List
 
 * Install GE Z-Wave Outlets
