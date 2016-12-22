@@ -234,13 +234,4 @@ shell_command:
   backup_device_tracker: cp -a /home/homeassistant/.homeassistant/device_tracker.yaml "/home/homeassistant/backup/device_tracker.yaml-$(date +"%m%d%Y-%H%M")"
   backup_automation: cp -a /home/homeassistant/.homeassistant/automation.yaml "/home/homeassistant/backup/automation.yaml-$(date +"%m%d%Y-%H%M")"
 
-script:
-  backup:
-    alias: Backup HA Configuration Files
-    sequence:
-      - service: shell_command.backup_configuration
-      - service: shell_command.backup_group
-      - service: shell_command.backup_customize
-      - service: shell_command.backup_known_devices
-      - service: shell_command.backup_automation
-      - service: shell_command.backup_device_tracker
+script: !include script.yaml

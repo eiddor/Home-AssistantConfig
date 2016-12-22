@@ -123,10 +123,8 @@
     entity_id: sensor.media_room
     state: 'PowerOff'
   action:
-    service: light.turn_on
-    entity_id: light.ge_12724_3way_dimmer_switch_level_11_0
-    data:
-      brightness: 80
+    service: homeassistant.turn_on
+    entity_id: script.timed_theater_lights
 
 - alias: Heal ZWave Nightly
   hide_entity: True

@@ -1,0 +1,34 @@
+timed_theater_lights:
+  alias: "Turn theater lights to 80 and set timer"
+  sequence:
+    # Cancel ev. old timers
+    - service: script.turn_off
+      data:
+         entity_id: script.theater_lights_off
+    - service: light.turn_on
+      entity_id: light.ge_12724_3way_dimmer_switch_level_11_0
+      data:
+        brightness: 80
+    # Set new timer
+    - service: script.turn_on
+      data:
+        entity_id: script.theater_lights_off
+
+theater_lights_off:
+  alias: "Turn off theater lights after 10 minutes"
+  sequence:
+    - delay:
+        minutes: 10
+    - service: light.turn_off
+      data:
+        entity_id: light.ge_12724_3way_dimmer_switch_level_11_0
+
+backup:
+  alias: Backup HA Configuration Files
+  sequence:
+    - service: shell_command.backup_configuration
+    - service: shell_command.backup_group
+    - service: shell_command.backup_customize
+    - service: shell_command.backup_known_devices
+    - service: shell_command.backup_automation
+    - service: shell_command.backup_device_tracker
