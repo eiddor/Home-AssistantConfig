@@ -61,7 +61,8 @@ SUNSET:
 * ~~Add Harmony Hub when it arrives~~
 * Configure a clever automation for when the Water Sensor is triggered (it's in a closet with my water heaters)
 * Add more sophisticated control of my Hue lights
-* Buy some Hue LED strips
+* Buy some Hue LED strips OR
+* Build a DIY LED setup using [LEDENET](https://www.amazon.com/dp/B01DY56N8U/ref=cm_sw_r_cp_ep_dp_98exyb78G91XA) or [this](https://www.amazon.com/Development-Boards-Kits-ARDUINO-A000005/dp/B003YVL34O) or [this](https://www.amazon.com/HiLetgo-Version-NodeMCU-Internet-Development/dp/B010O1G1ES), some [code](http://pastebin.com/iJAyQXzd), and some of [these](https://www.amazon.com/gp/product/B01CNL6MNM/) or [these](https://www.amazon.com/Adafruit-NeoPixel-Digital-RGB-Strip/dp/B00R5CDGWA)
 * Install the third Hue bulb 
 * Setup my two remaining Amazon IoT buttons to do something
 * Purchase some kind of doorbell/camera
