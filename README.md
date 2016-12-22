@@ -32,7 +32,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Turn on Christmas Lights at Sunset, off at Midnight
 * Check for Home Assistant Releases and notify via [Pushbullet](https://www.pushbullet.com/)
 * Turn On/Off Bedroom lamp when Dash Button event is called via API [script running on different host]
-* Turn theater lights on in Media Room on motion detection if no one is watching something via the Logitech Harmony Hub
+* Turn theater lights on in Media Room on motion detection for ten minutes if no one is watching something via the Logitech Harmony Hub
 * Local backup of all configuration files at 1 AM
 
 ![Screenshot Home View](http://i.imgur.com/nYWUbht.png)
