@@ -35,7 +35,7 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * Turn theater lights on in Media Room on motion detection for ten minutes if no one is watching something via the Logitech Harmony Hub
 * Local backup of all configuration files at 1 AM
 
-![Screenshot Home View](http://i.imgur.com/nYWUbht.png)
+![Screenshot Home View](http://i.imgur.com/yVPTda8.png)
 ![Screenshot of Information View](http://i.imgur.com/Qa9Y5m6.png)
 ![Screenshot of Entertainment View](http://i.imgur.com/plN6vGW.png)
 
