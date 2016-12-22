@@ -126,6 +126,13 @@ sensor.large_garage_door_time_in_state:
 sensor.large_garage_door_wifi_signal_strength:
     icon: mdi:wifi
 
+sensor.small_garage_door_status:
+    icon: mdi:car-connected
+sensor.small_garage_door_time_in_state:
+    icon: mdi:timer-sand
+sensor.small_garage_door_wifi_signal_strength:
+    icon: mdi:wifi
+
 #Presence Customization
 
 device_tracker.roddie_roddie:
