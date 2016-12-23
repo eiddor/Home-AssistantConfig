@@ -64,6 +64,7 @@ SUNSET:
 * Buy some Hue LED strips OR
 * Build a DIY LED setup using [LEDENET](https://www.amazon.com/dp/B01DY56N8U/ref=cm_sw_r_cp_ep_dp_98exyb78G91XA) or [this](https://www.amazon.com/Development-Boards-Kits-ARDUINO-A000005/dp/B003YVL34O) or [this](https://www.amazon.com/HiLetgo-Version-NodeMCU-Internet-Development/dp/B010O1G1ES), some [code](http://pastebin.com/iJAyQXzd), and some of [these](https://www.amazon.com/gp/product/B01CNL6MNM/) or [these](https://www.amazon.com/Adafruit-NeoPixel-Digital-RGB-Strip/dp/B00R5CDGWA)
 * Install the third Hue bulb 
+* Install an [Aeotec smart switch](https://www.amazon.com/dp/B008VWAPU4/ref=psdc_507840_t1_B00IRI1CEK) and [power relay](https://www.amazon.com/uxcell-HH52P-120VAC-Electromagnetic-DYF08A/dp/B00DN32YOG) to control the fireplace
 * Setup my two remaining Amazon IoT buttons to do something
 * Purchase some kind of doorbell/camera
 * Purchase some Z-Wave compatible thermostats
