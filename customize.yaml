@@ -35,15 +35,18 @@ binary_sensor.__sensor_3_0:
 #Philips Hue
 light.hue_color_lamp_1:
   friendly_name: Family Room Lamp 1
+  homebridge_hidden: true
   icon: mdi:lamp
 light.hue_color_lamp_2:
   friendly_name: Family Room Lamp 2
+  homebridge_hidden: true
   icon: mdi:lamp
 
 # Media Players
 
 media_player.roku_2n00ef560969:
   friendly_name: Roku TV
+  homebridge_hidden: true
   icon: mdi:tv
 media_player.roku_13c1cf162182:
   friendly_name: Media Room Roku
@@ -88,6 +91,7 @@ sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5:
   icon: mdi:water
 sensor.aeotec_zw100_multisensor_6_luminance_9_3:
   friendly_name: Luminance
+  homebridge_hidden: true
   icon: mdi:weather-sunny
 sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27:
   friendly_name: Ultraviolet
@@ -147,3 +151,30 @@ device_tracker.90b0ed89349a:
   friendly_name: Erin's iPhone
   icon: mdi:face-profile
 
+#Dark Sky
+sensor.dark_sky_temperature:
+  homebridge_hidden: true
+sensor.dark_sky_apparent_temperature:
+  homebridge_hidden: true
+sensor.dark_sky_icon:
+  homebridge_hidden: true
+sensor.dark_sky_summary:
+  homebridge_hidden: true
+sensor.dark_sky_minutely_summary:
+  homebridge_hidden: true
+sensor.dark_sky_hourly_summary:
+  homebridge_hidden: true
+sensor.dark_sky_daily_summary:
+  homebridge_hidden: true
+sensor.dark_sky_daily_high_temperature:
+  homebridge_hidden: true
+sensor.dark_sky_daily_high_apparent_temperature:
+  homebridge_hidden: true
+sensor.dark_sky_daily_low_temperature:
+  homebridge_hidden: true
+sensor.dark_sky_daily_low_apparent_temperature:
+  homebridge_hidden: true
+sensor.dark_sky_cloud_coverage:
+  homebridge_hidden: true
+sensor.dark_sky_precip_probability:
+  homebridge_hidden: true
