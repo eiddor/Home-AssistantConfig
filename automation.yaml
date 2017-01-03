@@ -126,6 +126,18 @@
     service: homeassistant.turn_on
     entity_id: script.timed_theater_lights
 
+- alias: Alert on high Media Room temperature
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.aeotec_zw100_multisensor_6_temperature_9_1
+    above: 80.0
+  action:
+    service: notify.pushbullet
+    data: 
+      title: 'Temperature alert'
+      message: "Media Room Temperature above 80!"
+
+
 - alias: Heal ZWave Nightly
   hide_entity: True
   trigger:
