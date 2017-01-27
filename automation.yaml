@@ -37,23 +37,40 @@
     service: homeassistant.turn_off
     entity_id: switch.ge_12722_onoff_relay_switch_switch_4_0 
 
-- alias: Turn Christmas Lights On At Sunset
-  hide_entity: True
-  trigger:
-    platform: sun
-    event: sunset
-  action:
-    service: homeassistant.turn_on
-    entity_id: switch.ge_12720_outdoor_smart_switch_switch_12_0
+# - alias: Turn Christmas Lights On At Sunset
+#   hide_entity: True
+#   trigger:
+#     platform: sun
+#     event: sunset
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id: switch.ge_12720_outdoor_smart_switch_switch_12_0
 
-- alias: Turn Christmas Lights Off At Midnight
-  hide_entity: True
+# - alias: Turn Christmas Lights Off At Midnight
+#   hide_entity: True
+#   trigger:
+#     platform: time
+#     after: '23:59:00'
+#   action:
+#     service: homeassistant.turn_off
+#     entity_id: switch.ge_12720_outdoor_smart_switch_switch_12_0 
+
+- alias: Turn Guest Room Lamp on at 5 PM
   trigger:
     platform: time
-    after: '23:59:00'
+    after: '17:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.hue_color_lamp_3
+
+- alias: Turn Guest Room Lamp off at 8 AM
+  trigger:
+    platform: time
+    after: '08:00:00'
   action:
     service: homeassistant.turn_off
-    entity_id: switch.ge_12720_outdoor_smart_switch_switch_12_0 
+    entity_id: light.hue_color_lamp_3 
+
 
 - alias: Media Room Theater Lights - Adjust Brightness
   hide_entity: True 
@@ -136,7 +153,6 @@
     data: 
       title: 'Temperature alert'
       message: "Media Room Temperature above 80!"
-
 
 - alias: Heal ZWave Nightly
   hide_entity: True

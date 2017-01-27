@@ -33,11 +33,21 @@ remote:
     host: 10.9.21.28
     activity: 22937584
 
+light:
+
 #Philips Hue
 
-light:
-  platform: hue
-  host: 10.9.21.152
+  - platform: hue
+    host: 10.9.21.152
+
+#LEDENET
+
+  - platform: flux_led
+    devices:
+      10.9.21.22:
+        name: LED Strip 1
+        protocol: 'ledenet'
+
 # Enables the frontend
 frontend:
 
@@ -225,6 +235,7 @@ cover:
       username: !secret garadget_username
       password: !secret garadget_password
       name: Small Garage Door
+
 
 #input_slider for theater lights
 
