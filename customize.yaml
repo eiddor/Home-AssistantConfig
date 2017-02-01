@@ -4,35 +4,50 @@
 switch.aeotec_zw096_smart_switch_6_switch_2_0:
   friendly_name: Bedroom Lamp
   icon: mdi:lamp
+  polling_intensity: 1
 switch.ge_12722_onoff_relay_switch_switch_4_0:
   friendly_name: Front Porch Light
   icon: mdi:lightbulb
+  polling_intensity: 1
 switch.ge_12722_onoff_relay_switch_switch_5_0:
   friendly_name: Bedroom Light
   icon: mdi:lightbulb
+  polling_intensity: 1
 light.ge_12730_fan_control_switch_level_6_0:
   friendly_name: Bedroom Fan
   icon: mdi:fan
+  polling_intensity: 1
 switch.ge_12722_onoff_relay_switch_switch_7_0:
   friendly_name: Kitchen Island Light
   icon: mdi:lightbulb
+  polling_intensity: 1
 switch.ge_12722_onoff_relay_switch_switch_8_0:
   friendly_name: Kitchen Main Light
   icon: mdi:lightbulb
+  polling_intensity: 1
 light.ge_12724_3way_dimmer_switch_level_11_0:
   friendly_name: Media Room Theater Lights
   icon: mdi:movie
+  polling_intensity: 1
 switch.ge_12722_onoff_relay_switch_switch_10_0:
   friendly_name: Media Room Main Lights
   icon: mdi:lightbulb
+  polling_intensity: 1
 switch.ge_12720_outdoor_smart_switch_switch_12_0:
   friendly_name: Christmas Lights
   icon: mdi:snowman
+  polling_intensity: 1
 binary_sensor.__sensor_3_0:
   friendly_name: Aeotec Water Sensor
   icon: mdi:water
 light.led_strip_1:
   friendly_name: LED Strip 1
+light.led_strip_2:
+  friendly_name: LED Strip 2
+switch.remotec_zfm80_switch_13_0:
+  friendly_name: Fireplace
+  icon: mdi:fire
+
 
 #Philips Hue
 light.hue_color_lamp_1:
@@ -237,3 +252,29 @@ group.all_covers:
 
 group.downloaders:
   emulated_hue: false
+
+group.rpi_stats:
+  emulated_hue: false
+  homebridge_hidden: true
+
+sensor.disk_use_home:
+  emulated_hue: false
+  homebridge_hidden: true
+sensor.cpu_use:
+  emulated_hue: false
+  homebridge_hidden: true
+sensor.cpu:
+  emulated_hue: false
+  homebridge_hidden: true
+sensor.ram_free:
+  emulated_hue: false
+  homebridge_hidden: true
+sensor.speedtest_download:
+  emulated_hue: false
+  homebridge_hidden: true
+sensor.speedtest_upload:
+  emulated_hue: false
+  homebridge_hidden: true
+sensor.speedtest_ping:
+  emulated_hue: false
+  homebridge_hidden: true

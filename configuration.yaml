@@ -45,8 +45,11 @@ light:
   - platform: flux_led
     devices:
       10.9.21.22:
-        name: LED Strip 1
-        protocol: 'ledenet'
+          name: LED Strip 1
+          protocol: 'ledenet'
+      10.9.21.24:
+          name: LED Strip 2
+          protocol: 'ledenet'
 
 # Enables the frontend
 frontend:
@@ -63,6 +66,7 @@ notify:
 # Emulated Hue
 emulated_hue:
   host_ip: 10.9.21.150
+  type: alexa
   exposed_domains:
     - light
     - group
@@ -99,20 +103,80 @@ history:
 recorder:
   # Delete events and states older than 1 weeks
   purge_days: 7
+  exclude:
+    domains:
+      - cover
+    entities:
+      - sun.sun
+      - sensor.disk_use_home
+      - sensor.cpu_use
+      - sensor.cpu
+      - sensor.ram_free
+      - cover.large_garage_door
+      - sensor.large_garage_door_status
+      - sensor.large_garage_door_time_in_state
+      - sensor.large_garage_door_wifi_signal_strength
+      - sensor.large_garage_door_reflection_rate
+      - cover.small_garage_door
+      - sensor.small_garage_door_status
+      - sensor.small_garage_door_time_in_state
+      - sensor.small_garage_door_wifi_signal_strength
+      - sensor.small_garage_door_reflection_rate
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_minutely_summary
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
+      - sensor.dark_sky_cloud_coverage
+      - sensor.dark_sky_precip_probability
 
 # View all events in a logbook
 logbook:
   exclude:
+    domains:
+      - cover
     entities:
+      - sun.sun
+      - sensor.disk_use_home
+      - sensor.cpu_use
+      - sensor.cpu
+      - sensor.ram_free
+      - cover.large_garage_door
+      - sensor.large_garage_door_status
       - sensor.large_garage_door_time_in_state
       - sensor.large_garage_door_wifi_signal_strength
+      - sensor.large_garage_door_reflection_rate
+      - cover.small_garage_door
+      - sensor.small_garage_door_status
       - sensor.small_garage_door_time_in_state
       - sensor.small_garage_door_wifi_signal_strength
-      - sensor.dark_sky_apparent_temperature
+      - sensor.small_garage_door_reflection_rate
       - sensor.dark_sky_temperature
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_minutely_summary
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_daily_high_temperature
       - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
       - sensor.dark_sky_cloud_coverage
-      - sun.sun
+      - sensor.dark_sky_precip_probability
+logger:
+  default: info
+  logs:
+    homeassistant.core: warn
+    homeassistant.components.http: warn
+    homeassistant.components.device_tracker: warn
+    plexapi: warn
 
 # Track the sun
 sun:
@@ -204,11 +268,27 @@ sensor:
       - free_disk_space
       - remaining_size
       - uptime
-
+  
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+    server_id: 9384
+  #Pi system monitor  
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_free
+      - type: processor_use
+  - platform: cpuspeed
+    name: CPU
 
 zwave:
   usb_path: /dev/zwave
   config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+  polling_interval: 30000
 
 #input_select for Bedroom Fan
 input_select:

@@ -23,6 +23,7 @@ Kitchen:
     - switch.ge_12722_onoff_relay_switch_switch_7_0
     - switch.ge_12722_onoff_relay_switch_switch_8_0
     - light.led_strip_1
+    - light.led_strip_2
 
 family_room: 
   name: Family Room
@@ -30,6 +31,7 @@ family_room:
   entities:
       - light.hue_color_lamp_1
       - light.hue_color_lamp_2
+      - switch.remotec_zfm80_switch_13_0
 
 guest_room:
   name: Guest Room
@@ -70,10 +72,23 @@ information:
   view: yes
   entities:
     - script.backup
+    - group.rpi_stats
     - group.multisensor
     - group.energy
     - group.watersensor
     - group.automations
+
+RPi Stats:
+  name: RPi Stats
+  icon: mdi:lan-connect
+  entities:
+    - sensor.disk_use_home
+    - sensor.cpu_use
+    - sensor.cpu
+    - sensor.ram_free
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
 
 watersensor: 
   name: Water Sensor
