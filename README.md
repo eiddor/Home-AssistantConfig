@@ -5,7 +5,7 @@ Welcome to my Home Assistant Configuration.  It's more or less complete for now,
 
 Home Assistant runs on my [Raspberry Pi 3](http://amzn.to/2e3DOBY) with [Aeon Labs Z Wave Stick (GEN 5)](http://amzn.to/2eAiAP0). 
 
-Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave Control Panel](https://github.com/OpenZWave/open-zwave-control-panel)
+Software on the Pi : [Home Assistant](https://home-assistant.io/), [OpenZwave Control Panel](https://github.com/OpenZWave/open-zwave-control-panel), and [Homebridge](https://github.com/nfarina/homebridge) with [Homebridge-homeassistant](https://github.com/home-assistant/homebridge-homeassistant) for Siri control
 
 **List of devices :**
 
@@ -24,19 +24,23 @@ Software on the Pi : [Home Assistant](https://home-assistant.io/) , [OpenZwave C
 * [Plex Media Server](https://www.plex.tv/)
 * [Logitech Harmony Smart Control](http://amzn.com/B00BQ5RYI4)
 * [Garadget](http://garadget.com)
+* [LEDENET Smart WiFi LED Controller](http://amzn.com/B01DY56N8U)
+* [Remotec ZFM-80 Z-Wave Contact Fixture Module](http://amzn.com/B00913ATFI)
+* [LED Strips](https://world.taobao.com/item/534019223996.htm)
 
 
 **Automations:**
 
 * Turn on Porch Lights at Sunset, off at Sunrise 
-* Turn on Christmas Lights at Sunset, off at Midnight
+* ~~Turn on Christmas Lights at Sunset, off at Midnight~~
+* Turn on Guest Room Lamp at 5 PM, off at 8 AM
 * Check for Home Assistant Releases and notify via [Pushbullet](https://www.pushbullet.com/)
 * Turn On/Off Bedroom lamp when Dash Button event is called via API [script running on different host]
 * Turn theater lights on in Media Room on motion detection for ten minutes if no one is watching something via the Logitech Harmony Hub
 * Local backup of all configuration files at 1 AM
 
-![Screenshot Home View](http://i.imgur.com/yVPTda8.png)
-![Screenshot of Information View](http://i.imgur.com/Qa9Y5m6.png)
+![Screenshot Home View](http://i.imgur.com/dDk7f2N.png)
+![Screenshot of Information View](http://i.imgur.com/1mXmdMw.png)
 ![Screenshot of Entertainment View](http://i.imgur.com/plN6vGW.png)
 
 
@@ -46,12 +50,14 @@ SUNRISE:
      Turn off Porch Lights
 
 SUNSET: 
-     Turn on Christmas Lights
+     ~~Turn on Christmas Lights~~ (Christmas is over)
      Turn on Porch Lights
 
+05:00 PM Turn on Guest Room lamp for one of the cats
 11:59 PM Turn off Christmas Lights
 01:01 AM Backup HASS Configuration Files
 02:31 AM Heal ZWave Network
+08:00 AM Turn off Guest Room lamp
 ```
 
 #Todo List
@@ -61,10 +67,11 @@ SUNSET:
 * ~~Add Harmony Hub when it arrives~~
 * Configure a clever automation for when the Water Sensor is triggered (it's in a closet with my water heaters)
 * Add more sophisticated control of my Hue lights
-* Buy some Hue LED strips OR
-* Build a DIY LED setup using [LEDENET](https://www.amazon.com/dp/B01DY56N8U/ref=cm_sw_r_cp_ep_dp_98exyb78G91XA) or [this](https://www.amazon.com/Development-Boards-Kits-ARDUINO-A000005/dp/B003YVL34O) or [this](https://www.amazon.com/HiLetgo-Version-NodeMCU-Internet-Development/dp/B010O1G1ES), some [code](http://pastebin.com/iJAyQXzd), and some of [these](https://www.amazon.com/gp/product/B01CNL6MNM/) or [these](https://www.amazon.com/Adafruit-NeoPixel-Digital-RGB-Strip/dp/B00R5CDGWA)
-* Install the third Hue bulb 
-* Install an [Aeotec smart switch](https://www.amazon.com/dp/B008VWAPU4/ref=psdc_507840_t1_B00IRI1CEK) and [power relay](https://www.amazon.com/uxcell-HH52P-120VAC-Electromagnetic-DYF08A/dp/B00DN32YOG) to control the fireplace
+* ~~Buy some Hue LED strips OR~~
+* ~~Build a DIY LED setup using [LEDENET](https://www.amazon.com/dp/B01DY56N8U/ref=cm_sw_r_cp_ep_dp_98exyb78G91XA) or [this](https://www.amazon.com/Development-Boards-Kits-ARDUINO-A000005/dp/B003YVL34O) or [this](https://www.amazon.com/HiLetgo-Version-NodeMCU-Internet-Development/dp/B010O1G1ES), some [code](http://pastebin.com/iJAyQXzd), and some of [these](https://www.amazon.com/gp/product/B01CNL6MNM/) or [these](https://www.amazon.com/Adafruit-NeoPixel-Digital-RGB-Strip/dp/B00R5CDGWA)~~ (Basic LED strip install complete)
+* Buy and install WS2812 LED strips, controller, etc.
+* ~~Install the third Hue bulb~~
+* ~~Install an [Aeotec smart switch](https://www.amazon.com/dp/B008VWAPU4/ref=psdc_507840_t1_B00IRI1CEK) and [power relay](https://www.amazon.com/uxcell-HH52P-120VAC-Electromagnetic-DYF08A/dp/B00DN32YOG) to control the fireplace~~ (Used the Remotec ZFM-80 instead)
 * Setup my two remaining Amazon IoT buttons to do something
 * Purchase some kind of doorbell/camera
 * Purchase some Z-Wave compatible thermostats
